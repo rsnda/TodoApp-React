@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import App from './src/App'
+import Screen from './src/screen'
 import {
   AppRegistry,
   StyleSheet,
@@ -14,7 +14,7 @@ import {
 export default class TodoApp extends Component {
   render() {
     return (
-      <App></App>
+      <Screen/>
     );
   }
 }

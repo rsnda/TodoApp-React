@@ -1,13 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import { Text, View, Button, StyleSheet,Switch } from 'react-native';
 
+
 const styles = StyleSheet.create({
   margin: {
     marginTop: 10
   }
 });
-
-
 
 export default class Todo extends Component {
 
@@ -20,7 +19,7 @@ export default class Todo extends Component {
 
     this.change = this.change.bind(this);
   }
-  
+
   change(val){
     this.setState({value:val})
     this.props.changeValue(this.props.todo)
@@ -29,16 +28,16 @@ export default class Todo extends Component {
   render() {
     const style = this.state.value ? {textDecorationLine:'line-through'} : null
     return (
-    
+
     <View>
 
     <Text style={[style]}>{this.props.todo.title.toUpperCase()}</Text>
-      <Switch 
+      <Switch
         style={{marginRight:50}}
         onValueChange={(val) => this.change(val)}
-      
+
         value={this.state.value}
-        
+
       />
       </View>
     );
@@ -48,3 +47,5 @@ export default class Todo extends Component {
 Todo.propType = {
   todo: PropTypes.Todo
 }
+
+
